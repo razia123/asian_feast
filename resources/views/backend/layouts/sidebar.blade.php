@@ -39,7 +39,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
+                    <a href="{{ route('category') }}" class="side-menu__item">
                         <i class="bx bx-file-blank side-menu__icon"></i>
                         <span class="side-menu__label">Category</span>
                     </a>
