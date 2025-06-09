@@ -19,7 +19,7 @@
                 <div class="card-title">Create</div>
             </div>
             <div class="card-body">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{ route('category.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="form-text" class="form-label fs-14 text-dark">Name</label>
