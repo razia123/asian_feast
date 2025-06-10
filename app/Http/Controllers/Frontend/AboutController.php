@@ -5,13 +5,13 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AboutController extends Controller
 {
     /**
-     * Display home page.
+     * 
      */
     public function index()
     {
-        return view('frontend.pages.home');
+        return view('frontend.pages.about');
     }
 }
