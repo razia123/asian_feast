@@ -113,7 +113,7 @@
                             <span class="flaticon-coffee-cup"></span>
                         </div>
                         <div class="media-body">
-                            <h3 class="heading">Quality Coffee</h3>
+                            <h3 class="heading">Quality Food</h3>
                             <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                                 unorthographic.</p>
                         </div>
@@ -141,25 +141,25 @@
                         <div class="col-md-6">
                             <div class="menu-entry">
                                 <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/menu-1.jpg') }});"></a>
+                                    style="background-image: url({{ asset('frontend/assets/images/dish-2.jpg') }});"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="menu-entry mt-lg-4">
                                 <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/menu-2.jpg') }});"></a>
+                                    style="background-image: url({{ asset('frontend/assets/images/dish-5.jpg') }});"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="menu-entry">
                                 <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/menu-3.jpg') }});"></a>
+                                    style="background-image: url({{ asset('frontend/assets/images/dish-5.jpg') }});"></a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="menu-entry mt-lg-4">
                                 <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/menu-4.jpg') }});"></a>
+                                    style="background-image: url({{ asset('frontend/assets/images/image_2.jpg') }});"></a>
                             </div>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
                                 <div class="text">
                                     <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                     <strong class="number" data-number="100">0</strong>
-                                    <span>Coffee Branches</span>
+                                    <span>Branches</span>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                                 <div class="text">
                                     <div class="icon"><span class="flaticon-coffee-cup"></span></div>
                                     <strong class="number" data-number="85">0</strong>
-                                    <span>Number of Awards</span>
+                                    <span>Number of Orders</span>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <span class="subheading">Discover</span>
-                    <h2 class="mb-4">Best Coffee Sellers</h2>
+                    <h2 class="mb-4">Our Set Menus</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
                         the blind texts.</p>
                 </div>
@@ -232,48 +232,42 @@
                 <div class="col-md-3">
                     <div class="menu-entry">
                         <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/menu-1.jpg') }});"></a>
+                            style="background-image: url({{ asset('frontend/assets/images/image_1.jpg') }});"></a>
                         <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
+                            <h3><a href="#">Set Menu-1</a></h3>
                             <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                            {{-- <p class="price"><span>$5.90</span></p>
+                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="menu-entry">
                         <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/menu-2.jpg') }});"></a>
+                            style="background-image: url({{ asset('frontend/assets/images/dish-11.jpg') }});"></a>
                         <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
+                            <h3><a href="#">Set Menu-2</a></h3>
                             <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="menu-entry">
                         <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/menu-3.jpg') }});"></a>
+                            style="background-image: url({{ asset('frontend/assets/images/dish-6.jpg') }});"></a>
                         <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
+                            <h3><a href="#">Set Menu-3</a></h3>
                             <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="menu-entry">
                         <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/menu-4.jpg') }});"></a>
+                            style="background-image: url({{ asset('frontend/assets/images/dish-3.jpg') }});"></a>
                         <div class="text text-center pt-4">
-                            <h3><a href="#">Coffee Capuccino</a></h3>
+                            <h3><a href="#">Set Menu-4</a></h3>
                             <p>A small river named Duden flows by their place and supplies</p>
-                            <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
@@ -281,7 +275,7 @@
         </div>
     </section>
 
-    <section class="ftco-gallery">
+    {{-- <section class="ftco-gallery">
         <div class="container-wrap">
             <div class="row no-gutters">
                 <div class="col-md-3 ftco-animate">
@@ -318,7 +312,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-menu">
         <div class="container">
@@ -339,8 +333,8 @@
                                 <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
                                     role="tab" aria-controls="v-pills-1" aria-selected="true">Main Dish</a>
 
-                                <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2"
-                                    role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
+                                {{-- <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2"
+                                    role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a> --}}
 
                                 <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3"
                                     role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>
@@ -361,9 +355,9 @@
                                                     <h3><a href="#">Grilled Beef</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -375,9 +369,9 @@
                                                     <h3><a href="#">Grilled Beef</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -389,16 +383,16 @@
                                                     <h3><a href="#">Grilled Beef</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
+                                {{-- <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
                                     aria-labelledby="v-pills-2-tab">
                                     <div class="row">
                                         <div class="col-md-4 text-center">
@@ -444,7 +438,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="tab-pane fade" id="v-pills-3" role="tabpanel"
                                     aria-labelledby="v-pills-3-tab">
@@ -457,9 +451,9 @@
                                                     <h3><a href="#">Hot Cake Honey</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -471,9 +465,9 @@
                                                     <h3><a href="#">Hot Cake Honey</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -485,9 +479,9 @@
                                                     <h3><a href="#">Hot Cake Honey</a></h3>
                                                     <p>Far far away, behind the word mountains, far from the countries
                                                         Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
+                                                    {{-- <p class="price"><span>$2.90</span></p>
                                                     <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
+                                                            to cart</a></p> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -501,7 +495,7 @@
         </div>
     </section>
 
-    <section class="ftco-section img" id="ftco-testimony"
+    {{-- <section class="ftco-section img" id="ftco-testimony"
         style="background-image: url({{ asset('frontend/assets/images/bg_1.jpg') }});"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
@@ -595,7 +589,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-section">
         <div class="container">
@@ -660,7 +654,7 @@
     </section>
 
 
-    <section class="ftco-appointment">
+    {{-- <section class="ftco-appointment">
         <div class="overlay"></div>
         <div class="container-wrap">
             <div class="row no-gutters d-md-flex align-items-center">
@@ -707,5 +701,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
