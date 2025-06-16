@@ -2,7 +2,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">About Us</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
@@ -15,7 +15,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+            {{-- <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Recent Blog</h2>
                     <div class="block-21 mb-4 d-flex">
@@ -45,8 +45,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+            </div> --}}
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Services</h2>
                     <ul class="list-unstyled">
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">

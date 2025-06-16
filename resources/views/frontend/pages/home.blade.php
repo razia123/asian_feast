@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    
+
 
     <section class="ftco-about d-md-flex">
         <div class="one-half img" style="background-image: url({{ asset('frontend/assets/images/about.jpg') }});"></div>
@@ -133,7 +133,8 @@
                         <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
                             coast of the Semantics, a large language ocean.</p>
-                        <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
+                        <p><a href="{{ route('menu') }}" class="btn btn-primary btn-outline-primary px-4 py-3">View Full
+                                Menu</a></p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -169,8 +170,7 @@
     </section>
 
     <section class="ftco-counter ftco-bg-dark img" id="section-counter"
-        style="background-image: url({{ asset('frontend/assets/images/bg_2.jpg') }});"
-        data-stellar-background-ratio="0.5">
+        style="background-image: url({{ asset('frontend/assets/images/bg_2.jpg') }});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
@@ -223,7 +223,7 @@
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <span class="subheading">Discover</span>
-                    <h2 class="mb-4">Our Set Menus</h2>
+                    <h2 class="mb-4">Our Set Menu</h2>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
                         the blind texts.</p>
                 </div>
@@ -231,7 +231,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="menu-entry">
-                        <a href="#" class="img"
+                        <a href="{{ route('menu_detail') }}" class="img"
                             style="background-image: url({{ asset('frontend/assets/images/image_1.jpg') }});"></a>
                         <div class="text text-center pt-4">
                             <h3><a href="#">Set Menu-1</a></h3>
@@ -274,45 +274,6 @@
             </div>
         </div>
     </section>
-
-    {{-- <section class="ftco-gallery">
-        <div class="container-wrap">
-            <div class="row no-gutters">
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-1.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-2.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-3.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-4.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
     <section class="ftco-menu">
         <div class="container">
@@ -590,6 +551,92 @@
             </div>
         </div>
     </section> --}}
+    {{-- <section class="ftco-gallery">
+        <div class="container-wrap">
+            <div class="row no-gutters">
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-1.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-2.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-3.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-4.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Gallery</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-wrap">
+            <div class="row no-gutters">
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-1.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-2.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-3.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="gallery.html" class="gallery img d-flex align-items-center"
+                        style="background-image: url({{ asset('frontend/assets/images/gallery-4.jpg') }});">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="ftco-section">
         <div class="container">
@@ -603,7 +650,8 @@
             <div class="row d-flex">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('frontend/assets/images/image_1.jpg') }}');">
+                        <a href="blog-single.html" class="block-20"
+                            style="background-image: url('{{ asset('frontend/assets/images/image_1.jpg') }}');">
                         </a>
                         <div class="text py-4 d-block">
                             <div class="meta">
@@ -619,7 +667,8 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('frontend/assets/images/image_2.jpg') }}');">
+                        <a href="blog-single.html" class="block-20"
+                            style="background-image: url('{{ asset('frontend/assets/images/image_2.jpg') }}');">
                         </a>
                         <div class="text py-4 d-block">
                             <div class="meta">
@@ -635,7 +684,8 @@
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('frontend/assets/images/image_3.jpg') }}');">
+                        <a href="blog-single.html" class="block-20"
+                            style="background-image: url('{{ asset('frontend/assets/images/image_3.jpg') }}');">
                         </a>
                         <div class="text py-4 d-block">
                             <div class="meta">

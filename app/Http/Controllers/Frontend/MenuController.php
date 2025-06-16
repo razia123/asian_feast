@@ -14,4 +14,20 @@ class MenuController extends Controller
     {
         return view('frontend.pages.menu');
     }
+
+    /**
+     * Display set menu page.
+     */
+    public function setMenu() 
+    {
+        return view('frontend.pages.set_menu');
+    }
+
+    /**
+     * Display menu detail.
+     */
+    public function menuDetail()
+    {
+        return view('frontend.pages.product_detail');
+    }
 }

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="{{ asset('frontend/assets/images/logo/logo-black.jpeg') }}" alt=""
+            <img src="{{ asset('frontend/assets/images/logo/logo.jpeg') }}" alt=""
                 style="height: 100px; width: auto;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -24,11 +24,11 @@
                     <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Menu</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="{{ route('menu') }}">Menu</a>
-                        <a class="dropdown-item" href="product-single.html">Set Menu</a>
+                        <a class="dropdown-item" href="{{ route('menu') }}">Single Menu</a>
+                        <a class="dropdown-item" href="{{ route('set_menu') }}">Set Menu</a>
                     </div>
                 </li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{{ route('service') }}" class="nav-link">Services</a></li>
                 {{-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> --}}
                 <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
                 {{-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span
