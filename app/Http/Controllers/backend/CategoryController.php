@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use App\Services\Backend\CategoryService;
 
 class CategoryController extends Controller
 {
@@ -28,9 +29,11 @@ class CategoryController extends Controller
     /**
      * 
      */
-    public function store(CategoryRequest $request)
+    public function store(CategoryRequest $request, CategoryService $categoryService)
     {
-        dd('hello');
+        if($categoryService->storeCategory($request->all())){
+            return redirect()->back();
+        }
     }
 }
 
