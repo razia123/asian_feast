@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Slider extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'slug',
-        'image',
-        'type_id'
-    ];
 
-    public function type()
-    {
-        return $this->belongsTo(Type::class);
-    }
+    protected $fillable = [
+        'image',
+        'title',
+        'description',
+        'status',
+    ];
 }

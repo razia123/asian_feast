@@ -44,6 +44,12 @@
                         <span class="side-menu__label">Category</span>
                     </a>
                 </li>
+                <li class="slide has-sub">
+                    <a href="{{ route('food_type') }}" class="side-menu__item">
+                        <i class="bx bx-list-ol side-menu__icon"></i>
+                        <span class="side-menu__label">Food Type</span>
+                    </a>
+                </li>
                 <!-- End::slide -->
 
                 <!-- Start::slide__category -->
