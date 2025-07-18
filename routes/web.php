@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\AuthController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\backend\FoodTypeController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -31,6 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/category', [CategoryController::class, 'index'])->name('category');
     Route::get('/create-category', [CategoryController::class, 'create'])->name('category.create');
     Route::post('/create-category', [CategoryController::class, 'store'])->name('category.store');
+
+    Route::get('/food-type', [FoodTypeController::class, 'index'])->name('food_type');
+    Route::get('/create-food-type', [FoodTypeController::class, 'create'])->name('food_type.create');
+
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
