@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\About;
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.home');
+        $sliders = Slider::where('status', true)->get();
+        $about = About::where('status', true)->first();
+        return view('frontend.pages.home', compact('sliders', 'about'));
     }
 }

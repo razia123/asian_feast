@@ -25,10 +25,10 @@
                 <!-- End::slide__category -->
 
                 <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
-                        <i class="bx bx-home side-menu__icon"></i>
-                        <span class="side-menu__label">Dashboards</span>
+                <li class="slide">
+                    <a href="{{ \App\Filament\Pages\EditProfile::getUrl() }}" class="side-menu__item">
+                        <i class="bx bx-user-circle side-menu__icon"></i>
+                        <span class="side-menu__label">Profile</span>
                     </a>
                 </li>
                 <!-- End::slide -->
@@ -36,21 +36,6 @@
                 <!-- Start::slide__category -->
                 <li class="slide__category"><span class="category-name">Menu</span></li>
                 <!-- End::slide__category -->
-
-                <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="{{ route('category') }}" class="side-menu__item">
-                        <i class="bx bx-file-blank side-menu__icon"></i>
-                        <span class="side-menu__label">Category</span>
-                    </a>
-                </li>
-                <li class="slide has-sub">
-                    <a href="{{ route('food_type') }}" class="side-menu__item">
-                        <i class="bx bx-list-ol side-menu__icon"></i>
-                        <span class="side-menu__label">Food Type</span>
-                    </a>
-                </li>
-                <!-- End::slide -->
 
                 <!-- Start::slide__category -->
                 <li class="slide__category"><span class="category-name">Website Settings</span></li>

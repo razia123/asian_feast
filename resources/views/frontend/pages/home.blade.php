@@ -2,79 +2,33 @@
 @section('title', 'Home')
 
 @section('content')
-    <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/bg_1.jpg') }});">
-            <div class="overlay"></div>
-            {{-- <div class="container">
-                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+    <section class="home-slider owl-carousel full-height-slider">
+        @foreach ($sliders as $slider)
+            <div class="slider-item" style="background-image: url({{ asset('storage/' . $slider->image) }});">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                        <span class="subheading">Welcome</span>
-                        <h1 class="mb-4">The Best Coffee Testing Experience</h1>
-                        <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia.</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+                        <div class="col-md-8 col-sm-12 text-center ftco-animate">
+                            
+                        </div>
+
                     </div>
-
                 </div>
-            </div> --}}
-        </div>
-
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/bg_2.jpg') }});">
-            <div class="overlay"></div>
-            {{-- <div class="container">
-                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                        <span class="subheading">Welcome</span>
-                        <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
-                        <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia.</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-                    </div>
-
-                </div>
-            </div> --}}
-        </div>
-
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/bg_3.jpg') }});">
-            <div class="overlay"></div>
-            {{-- <div class="container">
-                <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-                    <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                        <span class="subheading">Welcome</span>
-                        <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
-                        <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the
-                            necessary regelialia.</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-                                class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-                    </div>
-
-                </div>
-            </div> --}}
-        </div>
+            </div>
+        @endforeach
     </section>
-
-
-
     <section class="ftco-about d-md-flex">
-        <div class="one-half img" style="background-image: url({{ asset('frontend/assets/images/about.jpg') }});"></div>
-        <div class="one-half ftco-animate">
+        <div class="one-half img" style="background-image: url({{ asset('storage/' . $about->image) }}); height: 600px; width: 100%; background-size: cover; background-position: center;"></div>
+        <div class="one-half ftco-animate d-flex align-items-center">
             <div class="overlap">
                 <div class="heading-section ftco-animate ">
                     <span class="subheading">Discover</span>
-                    <h2 class="mb-4">Our Story</h2>
+                    <h2 class="mb-4">{{ $about->title }}</h2>
                 </div>
                 <div>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
-                        have been rewritten a thousand times and everything that was left from its origin would be the word
-                        "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing
-                        the copy said could convince her and so it didn’t take long until a few insidious Copy Writers
-                        ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they
-                        abused her for their.</p>
+                    <p>{!! Str::limit($about->description, 200) !!}</p>
+                    <a href="{{ route('about') }}" class="btn btn-primary">Read More</a>
                 </div>
             </div>
         </div>
@@ -90,8 +44,6 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Easy to Order</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
@@ -102,20 +54,18 @@
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Fastest Delivery</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                unorthographic.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 ftco-animate">
                     <div class="media d-block text-center block-6 services">
                         <div class="icon d-flex justify-content-center align-items-center mb-5">
-                            <span class="flaticon-coffee-cup"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="#000000">
+                                <path d="M16,1.051V0H8v1.051c-1.212,0.212-2.315,0.646-3.266,1.26L4,3H3v1h1.42c-0.48,0.836-0.813,1.754-0.968,2.717L0,16.969V18h24v-1.031L20.548,7.977c-0.155-0.963-0.488-1.881-0.968-2.717H21V3h-1l-0.734-0.689C18.315,1.697,17.212,1.263,16,1.051z M9,1h6v0.949c-1.141-0.199-2.334-0.199-3.475,0H9V1z M19.07,7.01C19.442,7.84,19.696,8.743,19.81,9.66L18,17H6l-1.81-7.34c0.114-0.917,0.368-1.82,0.74-2.65H19.07z"/>
+                            </svg>
                         </div>
                         <div class="media-body">
                             <h3 class="heading">Quality Food</h3>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                unorthographic.</p>
                         </div>
                     </div>
                 </div>

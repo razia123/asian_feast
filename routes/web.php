@@ -1,9 +1,6 @@
 <?php
 
-use App\Http\Controllers\backend\AuthController;
-use App\Http\Controllers\backend\CategoryController;
-use App\Http\Controllers\backend\DashboardController;
-use App\Http\Controllers\backend\FoodTypeController;
+use App\Http\Controllers\backend\LoginController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
@@ -22,21 +19,10 @@ Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 Route::get('/set-menu', [MenuController::class, 'setMenu'])->name('set_menu');
 Route::get('/menu-detail', [MenuController::class, 'menuDetail'])->name('menu_detail');
 
-Route::get('/login', [AuthController::class, 'index']);
-Route::post('/login', [AuthController::class, 'login'])->name('login');
+
 
 //Admin routes
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    Route::get('/category', [CategoryController::class, 'index'])->name('category');
-    Route::get('/create-category', [CategoryController::class, 'create'])->name('category.create');
-    Route::post('/create-category', [CategoryController::class, 'store'])->name('category.store');
-
-    Route::get('/food-type', [FoodTypeController::class, 'index'])->name('food_type');
-    Route::get('/create-food-type', [FoodTypeController::class, 'create'])->name('food_type.create');
-
-
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
