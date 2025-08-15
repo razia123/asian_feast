@@ -37,8 +37,8 @@ class MenuResource extends Resource
                 Forms\Components\RichEditor::make('description')
                     ->columnSpanFull(),
                 Forms\Components\Select::make('type_id')
-                    ->relationship('type', 'name')
-                    ->required(),
+                    ->relationship('type', 'name'),
+                    // ->required(),
                 Forms\Components\Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),

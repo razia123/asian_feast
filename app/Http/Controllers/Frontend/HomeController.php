@@ -16,6 +16,7 @@ class HomeController extends Controller
     {
         $sliders = Slider::where('status', true)->get();
         $about = About::where('status', true)->first();
+        // dd($sliders);
         return view('frontend.pages.home', compact('sliders', 'about'));
     }
 }

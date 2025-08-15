@@ -4,7 +4,7 @@
 @section('content')
     <section class="home-slider owl-carousel full-height-slider">
         @foreach ($sliders as $slider)
-            <div class="slider-item" style="background-image: url({{ asset('storage/' . $slider->image) }});">
+                                    <div class="slider-item" style="background-image: url({{ asset('storage/' . $slider->image) }}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -19,15 +19,15 @@
         @endforeach
     </section>
     <section class="ftco-about d-md-flex">
-        <div class="one-half img" style="background-image: url({{ asset('storage/' . $about->image) }}); height: 600px; width: 100%; background-size: cover; background-position: center;"></div>
+        <div class="one-half img" style="background-image: url({{ asset('storage/' . @$about->image) }}); height: 600px; width: 100%; background-size: cover; background-position: center;"></div>
         <div class="one-half ftco-animate d-flex align-items-center">
             <div class="overlap">
                 <div class="heading-section ftco-animate ">
                     <span class="subheading">Discover</span>
-                    <h2 class="mb-4">{{ $about->title }}</h2>
+                    <h2 class="mb-4">{{ @$about->title }}</h2>
                 </div>
                 <div>
-                    <p>{!! Str::limit($about->description, 200) !!}</p>
+                    <p>{!! Str::limit(@$about->description, 200) !!}</p>
                     <a href="{{ route('about') }}" class="btn btn-primary">Read More</a>
                 </div>
             </div>

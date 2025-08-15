@@ -4,7 +4,8 @@
 @section('content')
     <section class="home-slider owl-carousel">
 
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/image_2.jpg') }});" data-stellar-background-ratio="0.5">
+        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/image_2.jpg') }});"
+            data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row slider-text justify-content-center align-items-center">
@@ -29,16 +30,19 @@
                             <h2 class="h4">Contact Information</h2>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                            <p><span>Address:</span> 146, Perry rise
+                                Forest hill
+                                London
+                                SE23 2QP</p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                            <p><span>Phone:</span> <a href="tel://1234567920">07482803597</a></p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                            <p><span>Email:</span> <a href="mailto:info@asianfeast.uk">info@asianfeast.uk</a></p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Website:</span> <a href="#">yoursite.com</a></p>
+                            <p><span>Website:</span> <a href="#"></a></p>
                         </div>
                     </div>
                 </div>

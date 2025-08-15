@@ -34,8 +34,8 @@ class CategoryResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->image(),
                 Forms\Components\Select::make('type_id')
-                    ->relationship('type', 'name')
-                    ->required(),
+                    ->relationship('type', 'name'),
+                    
             ]);
     }
 
