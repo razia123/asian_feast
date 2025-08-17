@@ -1,22 +1,22 @@
-name: Deploy to cPanel FTP
+name: FTP Deploy
 
 on:
   push:
     branches:
-      - main  # Adjust the branch as needed
+      - main
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout source
+        uses: actions/checkout@v3
 
-    - name: Upload to cPanel FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        server: asianfeast.uk   
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./   # Repo root
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./ # Local directory (your GitHub repository root)
