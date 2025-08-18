@@ -1,22 +1,21 @@
-name: FTP Deploy
-
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]  # Or master, whichever branch you use
 
+name: Deploy Laravel to cPanel via FTP
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout source
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      - name: Sync via FTP
+        uses: SamKirkland/[email protected]
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}       # e.g. ftp.asianfeast.uk or your server IP
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./ # Local directory (your GitHub repository root)
+          server-dir: public_html/               # Path where Laravel’s public directory should go
+          local-dir: .                          # Root of your project
+
