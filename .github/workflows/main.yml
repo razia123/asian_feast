@@ -24,3 +24,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/   # Change to your FTP path
           local-dir: ./               # Upload root project
+          port: 21
