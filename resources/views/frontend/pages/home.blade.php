@@ -89,30 +89,14 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="menu-entry">
-                                <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/dish-2.jpg') }});"></a>
+                        @foreach ($menus as $menu)
+                            <div class="col-md-6">
+                                <div class="menu-entry">
+                                    <a href="#" class="img"
+                                        style="background-image: url({{ asset('storage/' . $menu->image) }});"></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="menu-entry mt-lg-4">
-                                <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/dish-5.jpg') }});"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="menu-entry">
-                                <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/dish-5.jpg') }});"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="menu-entry mt-lg-4">
-                                <a href="#" class="img"
-                                    style="background-image: url({{ asset('frontend/assets/images/image_2.jpg') }});"></a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -179,48 +163,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="{{ route('menu_detail') }}" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/image_1.jpg') }});"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Set Menu-1</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                            {{-- <p class="price"><span>$5.90</span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p> --}}
+                @foreach ($set_menus as $set_menu)
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            <a href="{{ route('menu_detail') }}" class="img"
+                                style="background-image: url({{ asset('storage/' . $set_menu->image) }});"></a>
+                            <div class="text text-center pt-4">
+                                <h3><a href="#">{{ $set_menu->name }}</a></h3>
+                                <p>{{ $set_menu->description }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/dish-11.jpg') }});"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Set Menu-2</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/dish-6.jpg') }});"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Set Menu-3</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="menu-entry">
-                        <a href="#" class="img"
-                            style="background-image: url({{ asset('frontend/assets/images/dish-3.jpg') }});"></a>
-                        <div class="text text-center pt-4">
-                            <h3><a href="#">Set Menu-4</a></h3>
-                            <p>A small river named Duden flows by their place and supplies</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -241,163 +195,35 @@
                         <div class="col-md-12 nav-link-wrap mb-5">
                             <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab"
                                 role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
-                                    role="tab" aria-controls="v-pills-1" aria-selected="true">Main Dish</a>
-
-                                {{-- <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2"
-                                    role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a> --}}
-
-                                <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3"
-                                    role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>
+                                @foreach ($categories as $key => $category)
+                                    <a class="nav-link {{ $key == 0 ? 'active' : '' }}" id="v-pills-{{ $category->id }}-tab" data-toggle="pill" href="#v-pills-{{ $category->id }}"
+                                        role="tab" aria-controls="v-pills-{{ $category->id }}" aria-selected="{{ $key == 0 ? 'true' : 'false' }}">{{ $category->name }}</a>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-md-12 d-flex align-items-center">
 
                             <div class="tab-content ftco-animate" id="v-pills-tabContent">
 
-                                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-                                    aria-labelledby="v-pills-1-tab">
-                                    <div class="row">
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-1.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
+                                @foreach ($categories as $key => $category)
+                                    <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" id="v-pills-{{ $category->id }}" role="tabpanel"
+                                        aria-labelledby="v-pills-{{ $category->id }}-tab">
+                                        <div class="row">
+                                            @foreach ($category->menus as $menu)
+                                                <div class="col-md-4 text-center">
+                                                    <div class="menu-wrap">
+                                                        <a href="#" class="menu-img img mb-4"
+                                                            style="background-image: url({{ asset('storage/' . $menu->image) }});"></a>
+                                                        <div class="text">
+                                                            <h3><a href="#">{{ $menu->name }}</a></h3>
+                                                            <p>{{ $menu->description }}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-2.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-3.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                </div>
-
-                                {{-- <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
-                                    aria-labelledby="v-pills-2-tab">
-                                    <div class="row">
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/drink-1.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Lemonade Juice</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/drink-2.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Pineapple Juice</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/drink-3.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Soda Drinks</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> --}}
-
-                                <div class="tab-pane fade" id="v-pills-3" role="tabpanel"
-                                    aria-labelledby="v-pills-3-tab">
-                                    <div class="row">
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dessert-1.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Hot Cake Honey</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dessert-2.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Hot Cake Honey</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dessert-3.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Hot Cake Honey</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -552,38 +378,16 @@
         </div>
         <div class="container-wrap">
             <div class="row no-gutters">
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-1.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-2.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-3.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <a href="gallery.html" class="gallery img d-flex align-items-center"
-                        style="background-image: url({{ asset('frontend/assets/images/gallery-4.jpg') }});">
-                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                    </a>
-                </div>
+                @foreach ($galleries as $gallery)
+                    <div class="col-md-3 ftco-animate">
+                        <a href="gallery.html" class="gallery img d-flex align-items-center"
+                            style="background-image: url({{ asset('storage/' . $gallery->image) }});">
+                            <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                                <span class="icon-search"></span>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -598,57 +402,24 @@
                 </div>
             </div>
             <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('{{ asset('frontend/assets/images/image_1.jpg') }}');">
-                        </a>
-                        <div class="text py-4 d-block">
-                            <div class="meta">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                @foreach ($blogs as $blog)
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a href="blog-single.html" class="block-20"
+                                style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
+                            </a>
+                            <div class="text py-4 d-block">
+                                <div class="meta">
+                                    <div><a href="#">{{ $blog->created_at->format('M d, Y') }}</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mt-2"><a href="#">{{ $blog->title }}</a></h3>
+                                <p>{{ $blog->description }}</p>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('{{ asset('frontend/assets/images/image_2.jpg') }}');">
-                        </a>
-                        <div class="text py-4 d-block">
-                            <div class="meta">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                            </div>
-                            <h3 class="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('{{ asset('frontend/assets/images/image_3.jpg') }}');">
-                        </a>
-                        <div class="text py-4 d-block">
-                            <div class="meta">
-                                <div><a href="#">Sept 10, 2018</a></div>
-                                <div><a href="#">Admin</a></div>
-                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                            </div>
-                            <h3 class="heading mt-2"><a href="#">The Delicious Pizza</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

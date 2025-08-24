@@ -8,15 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'slug',
-        'image',
-        'type_id'
-    ];
 
-    public function type()
+    protected $guarded = [];
+
+    public function menus()
     {
-        return $this->belongsTo(Type::class);
+        return $this->hasMany(Menu::class);
     }
 }
