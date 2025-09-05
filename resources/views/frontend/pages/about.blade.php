@@ -4,7 +4,7 @@
 @section('content')
     <section class="home-slider owl-carousel">
 
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/image_2.jpg') }});background-size: cover; background-position: center; background-repeat: no-repeat;"
+        <div class="slider-item" style="background-image: url({{ asset('storage/' . @$about->image) }});background-size: cover; background-repeat: no-repeat;"
             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
