@@ -80,9 +80,9 @@
                     <div class="heading-section text-md-right ftco-animate">
                         <span class="subheading">Discover</span>
                         <h2 class="mb-4">Our Menu</h2>
-                        <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
+                        {{-- <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
                             Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
-                            coast of the Semantics, a large language ocean.</p>
+                            coast of the Semantics, a large language ocean.</p> --}}
                         <p><a href="{{ route('menu') }}" class="btn btn-primary btn-outline-primary px-4 py-3">View Full
                                 Menu</a></p>
                     </div>
@@ -103,7 +103,7 @@
         </div>
     </section>
 
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter"
+    {{-- <section class="ftco-counter ftco-bg-dark img" id="section-counter"
         style="background-image: url({{ asset('frontend/assets/images/bg_2.jpg') }});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-section">
         <div class="container">
@@ -158,8 +158,8 @@
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <span class="subheading">Discover</span>
                     <h2 class="mb-4">Our Set Menu</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p>
+                    {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p> --}}
                 </div>
             </div>
             <div class="row">
@@ -185,8 +185,8 @@
                 <div class="col-md-7 heading-section text-center ftco-animate">
                     <span class="subheading">Discover</span>
                     <h2 class="mb-4">Our Products</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p>
+                    {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p> --}}
                 </div>
             </div>
             <div class="row d-md-flex">
@@ -216,7 +216,7 @@
                                                             style="background-image: url({{ asset('storage/' . $menu->image) }});"></a>
                                                         <div class="text">
                                                             <h3><a href="#">{{ $menu->name }}</a></h3>
-                                                            <p>{{ $menu->description }}</p>
+                                                            <p>{!! $menu->description !!}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -370,9 +370,10 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
+                    <span class="subheading">Discover</span>
                     <h2 class="mb-4">Gallery</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p>
+                    {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p> --}}
                 </div>
             </div>
         </div>
@@ -396,9 +397,10 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">Recent from blog</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p>
+                    <span class="subheading">Discover</span>
+                    <h2 class="mb-4">Our Videos</h2>
+                    {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p> --}}
                 </div>
             </div>
             <div class="row d-flex">

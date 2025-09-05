@@ -5,9 +5,9 @@
             <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">About Us</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                        there
-                        live the blind texts.</p>
+                    <a href="{{ route('about') }}">
+                        <p>{!! Str::limit(@$about->description, 200) !!}</p>
+                    </a>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61578561987126"><span class="icon-facebook"></span></a></li>
@@ -80,7 +80,7 @@
                     Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved
+                    </script> Asian Feast. All rights reserved.
                 </p>
             </div>
         </div>
