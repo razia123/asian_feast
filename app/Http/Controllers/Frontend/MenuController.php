@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -12,7 +13,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.menu');
+        $categories = Category::with('menus')->get();
+        return view('frontend.pages.menu', compact('categories'));
     }
 
     /**
