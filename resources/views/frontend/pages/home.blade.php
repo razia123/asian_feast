@@ -1,6 +1,15 @@
 @extends('frontend.master')
 @section('title', 'Home')
 
+@section('styles')
+<style>
+.video-placeholder:hover .icon-play {
+    transform: scale(1.2);
+    color: #c797eb;
+}
+</style>
+@endsection
+
 @section('content')
     <section class="home-slider owl-carousel full-height-slider">
         @foreach ($sliders as $slider)
@@ -399,26 +408,23 @@
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <span class="subheading">Discover</span>
                     <h2 class="mb-4">Our Videos</h2>
-                    {{-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p> --}}
                 </div>
             </div>
             <div class="row d-flex">
-                @foreach ($blogs as $blog)
+                @foreach ($videos as $video)
                     <div class="col-md-4 d-flex ftco-animate">
-                        <div class="blog-entry align-self-stretch">
-                            <a href="blog-single.html" class="block-20"
-                                style="background-image: url('{{ asset('storage/' . $blog->image) }}');">
-                            </a>
-                            <div class="text py-4 d-block">
-                                <div class="meta">
-                                    <div><a href="#">{{ $blog->created_at->format('M d, Y') }}</a></div>
-                                    <div><a href="#">Admin</a></div>
-                                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                        <div class="blog-entry align-self-stretch text-center">
+                            <a href="#" class="block-20" data-toggle="modal" data-target="#videoModal" data-video-src="{{ asset('storage/' . $video->video) }}" data-video-title="{{ $video->title }}" data-video-description="{{ $video->description }}">
+                                <div class="video-placeholder" style="height: 200px; position: relative; border-radius: 10px; overflow: hidden;">
+                                    <img src="{{ asset('storage/' . $video->cover_photo) }}" alt="{{ $video->title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div class="d-flex align-items-center justify-content-center text-center" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.3);">
+                                        <span class="icon-play" style="font-size: 50px; color: #fff; transition: all 0.3s ease;"></span>
+                                    </div>
+                                    <div class="video-title" style="position: absolute; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.5); color: #fff; padding: 10px; text-align: center;">
+                                        <h3 class="heading mt-2" style="color: #fff; font-size: 16px; margin-bottom: 0;">{{ $video->title }}</h3>
+                                    </div>
                                 </div>
-                                <h3 class="heading mt-2"><a href="#">{{ $blog->title }}</a></h3>
-                                <p>{{ $blog->description }}</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 @endforeach
@@ -426,53 +432,50 @@
         </div>
     </section>
 
-
-    {{-- <section class="ftco-appointment">
-        <div class="overlay"></div>
-        <div class="container-wrap">
-            <div class="row no-gutters d-md-flex align-items-center">
-                <div class="col-md-6 d-flex align-self-stretch">
-                    <div id="map"></div>
-                </div>
-                <div class="col-md-6 appointment ftco-animate">
-                    <h3 class="mb-3">Book a Table</h3>
-                    <form action="#" class="appointment-form">
-                        <div class="d-md-flex">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name">
-                            </div>
-                            <div class="form-group ml-md-4">
-                                <input type="text" class="form-control" placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="d-md-flex">
-                            <div class="form-group">
-                                <div class="input-wrap">
-                                    <div class="icon"><span class="ion-md-calendar"></span></div>
-                                    <input type="text" class="form-control appointment_date" placeholder="Date">
-                                </div>
-                            </div>
-                            <div class="form-group ml-md-4">
-                                <div class="input-wrap">
-                                    <div class="icon"><span class="ion-ios-clock"></span></div>
-                                    <input type="text" class="form-control appointment_time" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group ml-md-4">
-                                <input type="text" class="form-control" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="d-md-flex">
-                            <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group ml-md-4">
-                                <input type="submit" value="Appointment" class="btn btn-primary py-3 px-4">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <video width="100%" controls id="modalVideo">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p id="modalVideoDescription"></p>
+          </div>
         </div>
-    </section> --}}
+      </div>
+    </div>
 @endsection
+
+@section('scripts')
+<script>
+    $(document).ready(function() {
+        $('#videoModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var videoSrc = button.data('video-src') // Extract info from data-* attributes
+            var videoTitle = button.data('video-title')
+            var videoDescription = button.data('video-description')
+            
+            var modal = $(this)
+            modal.find('.modal-title').text(videoTitle)
+            var video = modal.find('#modalVideo');
+            video.find('source').attr('src', videoSrc)
+            video[0].load();
+            modal.find('#modalVideoDescription').text(videoDescription)
+        });
+
+        $('#videoModal').on('hidden.bs.modal', function () {
+            $('#modalVideo')[0].pause();
+        });
+    });
+</script>
+@endsection
+
+

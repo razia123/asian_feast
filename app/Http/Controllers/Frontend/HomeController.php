@@ -10,6 +10,7 @@ use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\SetMenu;
 use App\Models\Slider;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $set_menus = SetMenu::latest()->take(4)->get();
         $galleries = Gallery::latest()->take(4)->get();
         $blogs = Blog::latest()->take(3)->get();
-        return view('frontend.pages.home', compact('sliders', 'about', 'menus', 'categories', 'set_menus', 'galleries', 'blogs'));
+        $videos = Video::latest()->take(3)->get();
+        return view('frontend.pages.home', compact('sliders', 'about', 'menus', 'categories', 'set_menus', 'galleries', 'blogs', 'videos'));
     }
 }

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+    @yield('styles')
 </head>
 
 <body>
@@ -63,6 +64,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&callback=initMap" async defer></script>
     <script src="{{ asset('frontend/assets/js/google-map.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+    @yield('scripts')
 
 </body>
 

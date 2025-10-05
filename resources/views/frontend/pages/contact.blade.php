@@ -32,8 +32,7 @@
                         <div class="col-md-12 mb-3">
                             <p><span>Address:</span> 146, Perry rise
                                 Forest hill
-                                London
-                                SE23 2QP</p>
+                                <p>London SE23 2QP</p></p>
                         </div>
                         <div class="col-md-12 mb-3">
                             <p><span>Phone:</span> <a href="tel://1234567920">07482803597</a></p>

@@ -63,8 +63,7 @@
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">146, Perry rise
                                     Forest hill
-                                    London
-                                    SE23 2QP</span></li>
+                                    <p>London SE23 2QP</p> </span></li>
                             <li><a href="#"><span class="icon icon-phone"></span><span class="text">07482803597</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
                                         class="text">info@asianfeast.uk</span></a></li>
