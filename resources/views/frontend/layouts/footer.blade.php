@@ -9,9 +9,12 @@
                         <p>{!! Str::limit(@$about->description, 200) !!}</p>
                     </a>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61578561987126"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61578561987126"><span
+                                    class="icon-facebook"></span></a></li>
+                        {{-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> --}}
                         <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        {{-- <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li> --}}
+                        <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -61,12 +64,17 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">146, Perry rise
-                                    Forest hill
-                                    <p>London SE23 2QP</p> </span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">07482803597</span></a></li>
+                            <li><span class="icon icon-map-marker"></span><span class="text">
+                                    <p>146, Perry rise</p>
+                                    <p>Forest hill</p>
+                                    <p>London</p><p>SE23 2QP</p>
+                                </span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span
+                                        class="text">07482803597</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span
                                         class="text">info@asianfeast.uk</span></a></li>
+                            <li><a href="https://asianfeast.xyz/"><span class="icon icon-envelope"></span><span
+                                        class="text">https://asianfeast.xyz/</span></a></li>
                         </ul>
                     </div>
                 </div>

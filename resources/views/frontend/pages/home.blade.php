@@ -43,7 +43,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-services">
+    {{-- <section class="ftco-section ftco-services">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 ftco-animate">
@@ -80,7 +80,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-section">
         <div class="container">
@@ -402,7 +402,7 @@
         </div>
     </section>
 
-    <section class="ftco-section">
+    {{-- <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
@@ -451,7 +451,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 @endsection
 
 @section('scripts')

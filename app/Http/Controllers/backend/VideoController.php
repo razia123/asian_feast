@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
 {
     public function index()
     {
-        return view('frontend.pages.video');
+        $videos = Video::latest()->get();
+        return view('frontend.pages.video', compact('videos'));
     }
 }
