@@ -391,7 +391,7 @@
                 @foreach ($galleries as $gallery)
                     <div class="col-md-3 ftco-animate">
                         <a href="gallery.html" class="gallery img d-flex align-items-center"
-                            style="background-image: url({{ asset('storage/' . $gallery->image) }});">
+                            style="background-image: url({{ asset('storage/' . $gallery->images[0]) }});">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-search"></span>
                             </div>
