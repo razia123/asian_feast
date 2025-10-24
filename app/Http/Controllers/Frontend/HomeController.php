@@ -22,7 +22,7 @@ class HomeController extends Controller
         $menus = Menu::latest()->take(4)->get();
         $categories = Category::with('menus')->get();
         $set_menus = SetMenu::latest()->take(4)->get();
-        $galleries = Gallery::latest()->take(4)->get();
+        $galleries = Gallery::orderBy('id', 'asc')->latest()->take(4)->get();
         $blogs = Blog::latest()->take(3)->get();
         $videos = Video::latest()->take(3)->get();
         return view('frontend.pages.home', compact('sliders', 'about', 'menus', 'categories', 'set_menus', 'galleries', 'blogs', 'videos'));

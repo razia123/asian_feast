@@ -2,24 +2,25 @@
 @section('title', 'Home')
 
 @section('styles')
-<style>
-.video-placeholder:hover .icon-play {
-    transform: scale(1.2);
-    color: #c797eb;
-}
-</style>
+    <style>
+        .video-placeholder:hover .icon-play {
+            transform: scale(1.2);
+            color: #c797eb;
+        }
+    </style>
 @endsection
 
 @section('content')
     <section class="home-slider owl-carousel full-height-slider">
         @foreach ($sliders as $slider)
-                                    <div class="slider-item" style="background-image: url({{ asset('storage/' . $slider->image) }}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
+            <div class="slider-item"
+                style="background-image: url({{ asset('storage/' . $slider->image) }}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
                         <div class="col-md-8 col-sm-12 text-center ftco-animate">
-                            
+
                         </div>
 
                     </div>
@@ -28,7 +29,9 @@
         @endforeach
     </section>
     <section class="ftco-about d-md-flex">
-        <div class="one-half img" style="background-image: url({{ asset('storage/' . @$about->image) }}); height: 600px; width: 100%; background-size: cover; background-position: center;"></div>
+        <div class="one-half img"
+            style="background-image: url({{ asset('storage/' . @$about->image) }}); height: 600px; width: 100%; background-size: cover; background-position: center;">
+        </div>
         <div class="one-half ftco-animate d-flex align-items-center">
             <div class="overlap">
                 <div class="heading-section ftco-animate ">
@@ -202,11 +205,14 @@
                 <div class="col-lg-12 ftco-animate p-md-5">
                     <div class="row">
                         <div class="col-md-12 nav-link-wrap mb-5">
-                            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab"
-                                role="tablist" aria-orientation="vertical">
+                            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
                                 @foreach ($categories as $key => $category)
-                                    <a class="nav-link {{ $key == 0 ? 'active' : '' }}" id="v-pills-{{ $category->id }}-tab" data-toggle="pill" href="#v-pills-{{ $category->id }}"
-                                        role="tab" aria-controls="v-pills-{{ $category->id }}" aria-selected="{{ $key == 0 ? 'true' : 'false' }}">{{ $category->name }}</a>
+                                    <a class="nav-link {{ $key == 0 ? 'active' : '' }}"
+                                        id="v-pills-{{ $category->id }}-tab" data-toggle="pill"
+                                        href="#v-pills-{{ $category->id }}" role="tab"
+                                        aria-controls="v-pills-{{ $category->id }}"
+                                        aria-selected="{{ $key == 0 ? 'true' : 'false' }}">{{ $category->name }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -215,7 +221,8 @@
                             <div class="tab-content ftco-animate" id="v-pills-tabContent">
 
                                 @foreach ($categories as $key => $category)
-                                    <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" id="v-pills-{{ $category->id }}" role="tabpanel"
+                                    <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}"
+                                        id="v-pills-{{ $category->id }}" role="tabpanel"
                                         aria-labelledby="v-pills-{{ $category->id }}-tab">
                                         <div class="row">
                                             @foreach ($category->menus as $menu)
@@ -389,9 +396,9 @@
         <div class="container-wrap">
             <div class="row no-gutters">
                 @foreach ($galleries as $gallery)
-                    <div class="col-md-3 ftco-animate">
+                    <div class="col-md-3 ftco-animate" style="margin: 1px;">
                         <a href="gallery.html" class="gallery img d-flex align-items-center"
-                            style="background-image: url({{ asset('storage/' . $gallery->images[0]) }});">
+                            style="background-image: url({{ asset('storage/' . $gallery->images[0]) }}); height: 250px;">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                                 <span class="icon-search"></span>
                             </div>
@@ -455,27 +462,25 @@
 @endsection
 
 @section('scripts')
-<script>
-    $(document).ready(function() {
-        $('#videoModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var videoSrc = button.data('video-src') // Extract info from data-* attributes
-            var videoTitle = button.data('video-title')
-            var videoDescription = button.data('video-description')
-            
-            var modal = $(this)
-            modal.find('.modal-title').text(videoTitle)
-            var video = modal.find('#modalVideo');
-            video.find('source').attr('src', videoSrc)
-            video[0].load();
-            modal.find('#modalVideoDescription').text(videoDescription)
-        });
+    <script>
+        $(document).ready(function() {
+            $('#videoModal').on('show.bs.modal', function(event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var videoSrc = button.data('video-src') // Extract info from data-* attributes
+                var videoTitle = button.data('video-title')
+                var videoDescription = button.data('video-description')
 
-        $('#videoModal').on('hidden.bs.modal', function () {
-            $('#modalVideo')[0].pause();
+                var modal = $(this)
+                modal.find('.modal-title').text(videoTitle)
+                var video = modal.find('#modalVideo');
+                video.find('source').attr('src', videoSrc)
+                video[0].load();
+                modal.find('#modalVideoDescription').text(videoDescription)
+            });
+
+            $('#videoModal').on('hidden.bs.modal', function() {
+                $('#modalVideo')[0].pause();
+            });
         });
-    });
-</script>
+    </script>
 @endsection
-
-
