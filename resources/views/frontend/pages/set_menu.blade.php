@@ -3,7 +3,7 @@
 
 @section('content')
     <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/bg_3.jpg') }});background-size: cover; background-position: center; background-repeat: no-repeat;"
+        <div class="slider-item" style="background-image: url({{ asset('frontend/assets/images/biriyani.jpg') }});background-size: cover; background-position: center; background-repeat: no-repeat;"
             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
@@ -11,7 +11,7 @@
 
                     <div class="col-md-7 col-sm-12 text-center ftco-animate">
                         <h1 class="mb-3 mt-5 bread">Our Set Menu</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Set Menu</span>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home</a></span> <span>Set Menu</span>
                         </p>
                     </div>
 
@@ -53,90 +53,7 @@
                                 <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
                                     aria-labelledby="v-pills-1-tab">
                                     <div class="row">
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-1.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-2.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-3.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-4.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-5.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <a href="#" class="menu-img img mb-4"
-                                                    style="background-image: url({{ asset('frontend/assets/images/dish-6.jpg') }});"></a>
-                                                <div class="text">
-                                                    <h3><a href="#">Grilled Beef</a></h3>
-                                                    <p>Far far away, behind the word mountains, far from the countries
-                                                        Vokalia and Consonantia.</p>
-                                                    {{-- <p class="price"><span>$2.90</span></p>
-                                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add
-                                                            to cart</a></p> --}}
-                                                </div>
-                                            </div>
-                                        </div>
+                                      <h1>Coming Soon...</h1>
                                     </div>
                                 </div>
                             </div>

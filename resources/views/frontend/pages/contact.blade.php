@@ -12,7 +12,7 @@
 
                     <div class="col-md-7 col-sm-12 text-center ftco-animate">
                         <h1 class="mb-3 mt-5 bread">Contact Us</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home</a></span> <span>Contact</span>
                         </p>
                     </div>
 
@@ -41,7 +41,7 @@
                             <p><span>Email:</span> <a href="mailto:info@asianfeast.uk">info@asianfeast.uk</a></p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Website:</span> <a href="#"></a></p>
+                            {{-- <p><span>Website:</span> <a href="#"></a></p> --}}
                         </div>
                     </div>
                 </div>
