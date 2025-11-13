@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('frontend/assets/images/logo/logo.jpeg') }}" alt=""
                 style="height: 100px; width: auto;">
         </a>
