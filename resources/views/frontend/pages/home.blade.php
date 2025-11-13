@@ -14,7 +14,7 @@
     <section class="home-slider owl-carousel full-height-slider">
         @foreach ($sliders as $slider)
             <div class="slider-item"
-                style="background-image: url({{ asset('storage/' . $slider->image) }}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 700px;">
+                style="background-image: url({{ asset('storage/' . $slider->image) }}); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
